@@ -14,7 +14,6 @@ public class UnityPlayerAuth : MonoBehaviour
     public event Action<PlayerInfo, string> OnSingedIn;
     public event Action<String> OnUpdateName;
     private PlayerInfo playerInfo;
-
     private async void Start()
     {
         await UnityServices.InitializeAsync();
@@ -133,6 +132,7 @@ public class UnityPlayerAuth : MonoBehaviour
     {
         await CloudSaveService.Instance.Data.Player.DeleteAsync(key);
     }
+
 
 
     //
